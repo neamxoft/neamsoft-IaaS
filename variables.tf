@@ -5,29 +5,31 @@
 variable "region" {
   description = "Región de AWS"
   type        = string
-  default     = "us-east-1"
+  default     = ""
 }
 
 variable "profile" {
   description = "Perfil de AWS CLI"
   type        = string
-  default     = "default"
+  default     = ""
 }
 
 variable "record" {
   description = "Dominio del API Gateway"
   type        = string
-  default     = "api.neamsoft.com.mx"
+  default     = ""
 }
 
 variable "zone_id" {
   description = "ID de la zona hospedada en Route53"
   type        = string
+  default     = ""
 }
 
 variable "certificate_arn" {
   description = "ARN del certificado ACM para el dominio API"
   type        = string
+  default     = ""
 }
 
 # ---------------------------------------------------------------------------
@@ -45,13 +47,13 @@ variable "properties-sendmail" {
     filename      = string
   })
   default = {
-    function_name = "neamsoft-sendmail-website"
-    description   = "neamsoft Mailer — Envío de correos via SES"
-    handler       = "sendmail.lambda_handler"
-    runtime       = "python3.14"
+    function_name = ""
+    description   = ""
+    handler       = ""
+    runtime       = ""
     timeout       = 30
     memory_size   = 128
-    filename      = "neamsoft-sendmail.zip"
+    filename      = ""
   }
 }
 
@@ -67,9 +69,9 @@ variable "sendmail-envs" {
     REGION       = string
   })
   default = {
-    SENDER_EMAIL = "no-reply@neamsoft.com.mx"
-    TO_EMAIL     = "contacto@neamsoft.com.mx"
-    SUBJECT      = "Nuevo mensaje de contacto — neamsoft"
-    REGION       = "us-east-1"
+    SENDER_EMAIL = ""
+    TO_EMAIL     = ""
+    SUBJECT      = ""
+    REGION       = ""
   }
 }
