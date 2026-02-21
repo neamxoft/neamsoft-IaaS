@@ -66,12 +66,14 @@ variable "sendmail-envs" {
     SENDER_EMAIL = string
     TO_EMAIL     = string
     SUBJECT      = string
+    REFERER      = string
     REGION       = string
   })
   default = {
     SENDER_EMAIL = ""
     TO_EMAIL     = ""
     SUBJECT      = ""
+    REFERER      = ""
     REGION       = ""
   }
 }

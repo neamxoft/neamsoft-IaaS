@@ -36,6 +36,7 @@ resource "aws_lambda_function" "neamsoft_sendmail" {
       SENDER_EMAIL = var.sendmail-envs.SENDER_EMAIL
       TO_EMAIL     = var.sendmail-envs.TO_EMAIL
       SUBJECT      = var.sendmail-envs.SUBJECT
+      REFERER      = var.sendmail-envs.REFERER
       REGION       = var.sendmail-envs.REGION
     }
   }
